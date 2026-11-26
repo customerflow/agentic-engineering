@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "_example_documentation_server": {
+      "command": "REPLACE_WITH_APPROVED_SERVER_COMMAND",
+      "args": [],
+      "env": {}
+    }
+  }
+}
