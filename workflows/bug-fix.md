@@ -7,5 +7,5 @@
 5. Assign one implementation owner.
 6. Implement the smallest safe fix.
 7. Run regression tests and `/verify-change`.
-8. Run `/review-change`; include `/security-review` for security-sensitive paths.
+8. Run `/review-change`; include `/cf-security-review` for security-sensitive paths.
 9. Prepare a PR. Human approves merge and deployment.

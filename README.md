@@ -60,7 +60,7 @@ Alternatively, keep this framework as a separate repo and ask Claude Code to rea
 3. Ask the orchestrator to run `/plan-feature`.
 4. Review and approve the feature plan before implementation.
 5. Ask the orchestrator to execute `/implement-feature` with the approved plan.
-6. Run `/verify-change`, `/security-review`, and `/review-change`.
+6. Run `/verify-change`, `/cf-security-review`, and `/review-change`.
 7. Inspect the complete diff and test output yourself.
 8. Ask Claude to prepare a pull request description.
 9. A human reviews and merges the PR.
@@ -73,3 +73,4 @@ Alternatively, keep this framework as a separate repo and ask Claude Code to rea
 - Never paste API keys, private keys, passwords, customer data, or production secrets into prompts.
 - The deny rules in `.claude/settings.json` are guardrails, not a complete security boundary.
 - Review permissions and tool names against the installed Claude Code version before enabling them.
+- `/cf-security-review` is this framework's review. It is deliberately not named `security-review`, because a project skill with that name would replace Claude Code's built-in `/security-review`. The built-in stays available and can be run as well.

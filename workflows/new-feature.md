@@ -7,7 +7,7 @@
 5. Orchestrator creates task ownership, dependencies, file scopes, and test gates.
 6. Human reviews and approves the plan.
 7. Run `/implement-feature`.
-8. Run `/verify-change`, `/security-review`, and `/review-change`.
+8. Run `/verify-change`, `/cf-security-review`, and `/review-change`.
 9. Resolve blocking findings and rerun affected checks.
 10. Run `/prepare-pr`.
 11. Human inspects diff, CI, and PR; human approves merge.

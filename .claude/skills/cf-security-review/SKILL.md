@@ -1,6 +1,6 @@
 ---
-name: security-review
-description: Perform a defensive security review of a proposed code change.
+name: cf-security-review
+description: Perform a defensive security review of a proposed code change. Named cf-security-review so it does not replace Claude Code's built-in /security-review.
 ---
 
 # Security review
