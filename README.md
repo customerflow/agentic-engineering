@@ -57,12 +57,12 @@ Alternatively, keep this framework as a separate repo and ask Claude Code to rea
 
 1. Create a Git issue or write a request using `templates/feature-request.md`.
 2. Start Claude Code in the target repository.
-3. Ask the orchestrator to run `/plan-feature`.
-4. Review and approve the feature plan before implementation.
-5. Ask the orchestrator to execute `/implement-feature` with the approved plan.
-6. Run `/verify-change`, `/security-review`, and `/review-change`.
+3. Run `/plan-feature <request>`, and save the plan to `docs/plans/` when asked.
+4. Review the saved plan and record your approval in it: set `Status` to `Approved` and tick the "Plan approved" line with your name and date.
+5. Run `/implement-feature docs/plans/<name>.md` yourself. It stops if the plan is not approved, and Claude cannot start it on its own.
+6. Run `/verify-change`, `/cf-security-review`, and `/review-change`, each with the plan file.
 7. Inspect the complete diff and test output yourself.
-8. Ask Claude to prepare a pull request description.
+8. Run `/prepare-pr docs/plans/<name>.md`.
 9. A human reviews and merges the PR.
 10. A human initiates and verifies deployment.
 
@@ -73,3 +73,4 @@ Alternatively, keep this framework as a separate repo and ask Claude Code to rea
 - Never paste API keys, private keys, passwords, customer data, or production secrets into prompts.
 - The deny rules in `.claude/settings.json` are guardrails, not a complete security boundary.
 - Review permissions and tool names against the installed Claude Code version before enabling them.
+- `/cf-security-review` is this framework's review. It is deliberately not named `security-review`, because a project skill with that name would replace Claude Code's built-in `/security-review`. The built-in stays available and can be run as well.
