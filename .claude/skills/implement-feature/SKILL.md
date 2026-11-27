@@ -25,7 +25,7 @@ Do this before anything else.
 3. Use separate Git worktrees for concurrent code-writing tasks.
 4. Agree API/data contracts before parallel backend/frontend implementation.
 5. Require each worker to report changed files, tests, and limitations.
-6. Integrate changes onto one integration branch created from the plan's base branch, in a controlled order, resolving conflicts deliberately. The whole change must be present in that one checkout before verification.
+6. Integrate changes onto one integration branch, in a controlled order, resolving conflicts deliberately. Use the branch this session was assigned, if it has one; otherwise create one from the plan's base branch. The whole change must be present in that one checkout before verification.
 7. Do not merge to protected branches or deploy.
 8. From the integration branch, run `/verify-change`, `/cf-security-review`, and `/review-change`, passing the plan file to each so they compare against the plan's base branch and acceptance criteria.
 
